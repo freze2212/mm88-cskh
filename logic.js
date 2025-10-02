@@ -15,20 +15,3 @@ document.querySelector('.back-home').addEventListener('click', function(e) {
   e.preventDefault();
   history.back();
 });
-
-const links = [
-  "https://t.me/MM884CSKH",
-  "https://t.me/MM883CSKH",
-  "https://t.me/MM880CSKH",
-]
-const linkElement = document.getElementById("liveChatLink")
-
-linkElement = addEventListener("click", function (e){
-
-  let index = parseInt (localStorage.getItem("chatLinkIndex")) || 0;
-
-  linkElement.href = links[index];
-
-  index = (index + 1) % links.length;
-  this.localStorage.setItem("chatLinkIndex", index)
-})
