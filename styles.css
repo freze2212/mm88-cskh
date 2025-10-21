@@ -176,6 +176,24 @@ body {
     margin-top: 1rem;
 }
 
+@media screen and (min-width: 48.1rem){ 
+    .action-grid-2x2 {
+        grid-template-rows: 1fr 1fr 1fr; 
+    }
+    
+    .section:first-child .action-grid-2x2 a:nth-child(5) {
+        grid-column: 1 / -1; 
+        justify-self: center;
+        max-width: 50%; 
+    }
+    .section:nth-child(2) .action-grid-2x2 {
+        transform: translateY(3rem);
+    }
+    .section:first-child .section-content-large {
+        background-image: url('assets/img/box-big-1.png');
+    }
+}
+
 .action-grid-1x2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -365,6 +383,18 @@ body {
     .action-grid-2x2 {
         margin-top: 1.6rem;
         padding-bottom: 0.5rem;
+    }
+
+    /* Mobile - Support Change Info positioning for Chat section */
+    .section:first-child .action-grid-2x2 a:nth-child(5) {
+        grid-column: 1 / -1; /* Span full width */
+        justify-self: center; /* Center the item */
+        max-width: 70%; /* Wider on mobile for better visibility */
+    }
+
+    /* Mobile - Chat section uses box-big-1 */
+    .section:first-child .section-content-large {
+        background-image: url('assets/img/box-big-1.png');
     }
 
     /* Promo section */
