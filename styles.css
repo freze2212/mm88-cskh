@@ -191,6 +191,10 @@ body {
     }
     .section:first-child .section-content-large {
         background-image: url('assets/img/box-big-1.png');
+    }    
+    /* Desktop - Experience section also uses box-big-1 */
+    .section:nth-child(2) .section-content-large {
+        background-image: url('assets/img/box-big-1.png');
     }
 }
 
